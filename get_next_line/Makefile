@@ -29,4 +29,4 @@ $(NAME): $(OBJ)
 clean:
 	@ rm -f $(OBJ)
 
-.PHONY: clean
+.PHONY: clean libft.a

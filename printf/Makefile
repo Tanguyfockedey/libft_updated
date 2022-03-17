@@ -28,7 +28,7 @@ OBJ		= $(FILES:.c=.o)
 	@ cc $(FLAGS) -c $< -o $@
 	@ printf "."
 
-$(NAME): libft $(OBJ)
+$(NAME): $(OBJ)
 	@ printf "\n"
 	@ ar -r $(NAME) $(OBJ)
 	@ echo add printf
@@ -36,4 +36,4 @@ $(NAME): libft $(OBJ)
 clean:
 	@ rm -f $(OBJ)
 
-.PHONY: clean
+.PHONY: clean libft.a

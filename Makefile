@@ -6,7 +6,7 @@
 #    By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/17 18:26:54 by tfockede          #+#    #+#              #
-#    Updated: 2022/03/17 19:58:44 by tfockede         ###   ########.fr        #
+#    Updated: 2022/03/17 20:52:33 by tfockede         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ re: fclean all
 
 all: libft get_next_line printf
 
-libft: 
+libft:
+#	@ mv libft.a base/libft.a
 	@ $(MAKE) -C base
-	@ echo create libft.h
 	@ mv base/libft.a libft.a
 
 get_next_line:
@@ -30,12 +30,12 @@ get_next_line:
 printf:
 	@ mv libft.a printf/libft.a
 	@ $(MAKE) -C printf
-	@ mv printf/ibft.a libft.a
+	@ mv printf/libft.a libft.a
 
 clean:
-	@ $(MAKE) -C base
-	@ $(MAKE) -C get_next_line
-	@ $(MAKE) -C printf
+	@ $(MAKE) clean -C base
+	@ $(MAKE) clean -C get_next_line
+	@ $(MAKE) clean -C printf
 	@ echo delete .o
 
 fclean: clean
