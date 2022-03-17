@@ -23,7 +23,7 @@ OBJ		= $(FILES:.c=.o)
 
 $(NAME): $(OBJ)
 	@ printf "\n"
-	@ ar -r $(NAME) $(OBJ)
+	@ ar -rc $(NAME) $(OBJ)
 	@ echo add get_next_line
 
 clean:

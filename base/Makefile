@@ -68,7 +68,7 @@ B_OBJ	= $(B_FILES:.c=.o)
 $(NAME): $(OBJ) $(B_OBJ)
 	@ printf "\n"
 	@ echo create libft
-	@ ar -r $(NAME) $(OBJ) $(B_OBJ)
+	@ ar -rc $(NAME) $(OBJ) $(B_OBJ)
 
 clean:
 	@ rm -f $(OBJ) $(B_OBJ)

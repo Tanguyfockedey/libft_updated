@@ -30,7 +30,7 @@ OBJ		= $(FILES:.c=.o)
 
 $(NAME): $(OBJ)
 	@ printf "\n"
-	@ ar -r $(NAME) $(OBJ)
+	@ ar -rc $(NAME) $(OBJ)
 	@ echo add printf
 
 clean:

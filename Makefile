@@ -6,19 +6,17 @@
 #    By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/17 18:26:54 by tfockede          #+#    #+#              #
-#    Updated: 2022/03/17 20:52:33 by tfockede         ###   ########.fr        #
+#    Updated: 2022/03/17 21:04:04 by tfockede         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
-FLAGS	= -Werror -Wall -Wextra
 
-re: fclean all
+re: all clean
 
-all: libft get_next_line printf
+all: libft get_next_line printf clean
 
 libft:
-#	@ mv libft.a base/libft.a
 	@ $(MAKE) -C base
 	@ mv base/libft.a libft.a
 
