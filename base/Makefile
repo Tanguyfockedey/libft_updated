@@ -6,7 +6,7 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 11:23:13 by tafocked          #+#    #+#              #
-#    Updated: 2023/04/05 15:46:58 by tafocked         ###   ########.fr        #
+#    Updated: 2023/11/08 17:43:25 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ CFLAGS	= -Wall -Wextra -Werror
 OBJ		= $(FILES:.c=.o)
 B_OBJ	= $(B_FILES:.c=.o)
 
-all: $(NAME)
+all: bonus
 
 re: fclean all
 

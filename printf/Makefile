@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= libftprintf.a
+NAME	= libft.a
 
 FILES	=	src/ft_printf.c \
 			src/ft_putunbr_base.c \
@@ -22,16 +22,14 @@ FILES	=	src/ft_printf.c \
 			src/ft_spec_string.c \
 			src/ft_spec_unsigned.c
 
-cc		= cc
-FLAGS	= -Wall -Wextra -Werror
+CC		= cc
+CFLAGS	= -Wall -Wextra -Werror
 OBJ		= $(FILES:.c=.o)
 
-re: fclean all
-
-all: $(NAME)
-
 $(NAME):  $(OBJ)
-	ar -rcu $(NAME) $(OBJ)
+	ar -r $(NAME) $(OBJ)
+
+re: fclean $(NAME)
 
 clean:
 	rm -f $(OBJ)
@@ -39,4 +37,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-.PHONY: all re clean fclean
+.PHONY: libft.a re clean fclean
