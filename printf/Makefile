@@ -12,15 +12,15 @@
 
 NAME	= libft.a
 
-FILES	=	src/ft_printf.c \
-			src/ft_putunbr_base.c \
-			src/ft_spec_char.c \
-			src/ft_spec_decimal.c \
-			src/ft_spec_hexalower.c \
-			src/ft_spec_hexaupper.c \
-			src/ft_spec_pointer.c \
-			src/ft_spec_string.c \
-			src/ft_spec_unsigned.c
+FILES	=	ft_printf.c \
+			ft_putunbr_base.c \
+			ft_spec_char.c \
+			ft_spec_decimal.c \
+			ft_spec_hexalower.c \
+			ft_spec_hexaupper.c \
+			ft_spec_pointer.c \
+			ft_spec_string.c \
+			ft_spec_unsigned.c
 
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
