@@ -14,7 +14,7 @@ NAME	= libft.a
 
 re: all clean
 
-all: libft get_next_line printf clean
+all: libft get_next_line printf
 
 libft:
 	@ $(MAKE) -C base
