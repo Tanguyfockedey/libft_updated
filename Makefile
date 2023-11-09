@@ -6,15 +6,15 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 17:18:53 by tafocked          #+#    #+#              #
-#    Updated: 2023/11/08 17:20:21 by tafocked         ###   ########.fr        #
+#    Updated: 2023/11/09 16:39:39 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
 
-re: all clean
-
 all: libft get_next_line printf
+
+re: clean all
 
 libft:
 	@ $(MAKE) -C base
@@ -40,4 +40,4 @@ fclean: clean
 	@ rm -f $(NAME)
 	@ echo delete libft.a
 
-.PHONY: re all libft get_next_line printf clean fclean
+.PHONY: all re libft get_next_line printf clean fclean
