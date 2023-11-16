@@ -6,7 +6,7 @@
 /*   By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 19:36:00 by tafocked          #+#    #+#             */
-/*   Updated: 2023/11/16 20:41:38 by tafocked         ###   ########.fr       */
+/*   Updated: 2023/11/16 20:51:35 by tafocked         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,14 @@ static int	ft_prestr(char *str, char *sign)
 
 double	ft_atof(const char *string)
 {
-	int	i;
-	int	sign;
+	int		i;
+	char	sign;
 	double	nb;
 	double	div;
 
 	nb = 0;
-	i = ft_prestr(string, &sign);
+	div = 0.1;
+	i = ft_prestr((char *)string, &sign);
 	while (ft_isdigit(string[i]))
 		nb = nb * 10. + string[i++] - '0';
 	if (string[i] == '.')
