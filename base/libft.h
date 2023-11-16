@@ -24,11 +24,13 @@ typedef struct s_list
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
+int		ft_isspace(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_atoi(const char *string);
+double	ft_atof(const char *string);
 char	*ft_itoa(int n);
 void	*ft_calloc(size_t count, size_t eltsize);
 void	ft_bzero(void *block, size_t size);
