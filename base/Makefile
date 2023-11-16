@@ -6,7 +6,7 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 11:23:13 by tafocked          #+#    #+#              #
-#    Updated: 2023/11/08 17:43:25 by tafocked         ###   ########.fr        #
+#    Updated: 2023/11/16 20:47:26 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME	= libft.a
 FILES	= ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isalnum.c \
+			ft_isspace.c \
 			ft_isascii.c \
 			ft_isprint.c \
 			ft_strlen.c \
@@ -33,6 +34,7 @@ FILES	= ft_isalpha.c \
 			ft_memcmp.c \
 			ft_strnstr.c \
 			ft_atoi.c \
+			ft_atof.c \
 			ft_calloc.c \
 			ft_strdup.c \
 			ft_substr.c \
