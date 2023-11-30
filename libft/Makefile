@@ -6,11 +6,11 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 11:23:13 by tafocked          #+#    #+#              #
-#    Updated: 2023/11/30 18:08:43 by tafocked         ###   ########.fr        #
+#    Updated: 2023/11/30 18:30:40 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= base_libft.a
+NAME	= libft.a
 
 FILES	= ft_isalpha.c \
 			ft_isdigit.c \
@@ -65,6 +65,8 @@ OBJ		= $(FILES:.c=.o)
 $(NAME): $(OBJ)
 	ar -r $(NAME) $(OBJ)
 
+all: $(NAME)
+
 re: fclean all
 
 clean: 
@@ -73,4 +75,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-.PHONY: re clean fclean
+.PHONY: all re clean fclean

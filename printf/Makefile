@@ -29,6 +29,8 @@ OBJ		= $(FILES:.c=.o)
 $(NAME):  $(OBJ)
 	ar -r $(NAME) $(OBJ)
 
+all: $(NAME)
+
 re: fclean $(NAME)
 
 clean:
@@ -37,4 +39,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-.PHONY: re clean fclean
+.PHONY: all re clean fclean

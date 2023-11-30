@@ -6,7 +6,7 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 17:33:36 by tafocked          #+#    #+#              #
-#    Updated: 2023/11/30 17:49:48 by tafocked         ###   ########.fr        #
+#    Updated: 2023/11/30 18:30:15 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ OBJ		= $(FILES:.c=.o)
 $(NAME): $(OBJ)
 	ar -r $(NAME) $(OBJ)
 
+all: $(NAME)
+
 re: fclean $(NAME)
 
 clean:
@@ -30,4 +32,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-.PHONY: re clean fclean
+.PHONY: all re clean fclean
