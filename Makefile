@@ -6,38 +6,35 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 17:18:53 by tafocked          #+#    #+#              #
-#    Updated: 2023/11/09 16:39:39 by tafocked         ###   ########.fr        #
+#    Updated: 2023/11/30 17:41:39 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
 
-all: libft get_next_line printf
+all: base_libft get_next_line printf
+	ar -ru $(NAME) base_libft/*.o get_next_line/*.o printf/*.o
 
 re: clean all
 
-libft:
-	@ $(MAKE) -C base
-	@ mv base/libft.a libft.a
+base_libft:
+	@ $(MAKE) -C base_libft
 
 get_next_line:
-	@ mv libft.a get_next_line/libft.a
 	@ $(MAKE) -C get_next_line
-	@ mv get_next_line/libft.a libft.a
 
 printf:
-	@ mv libft.a printf/libft.a
 	@ $(MAKE) -C printf
-	@ mv printf/libft.a libft.a
 
 clean:
-	@ $(MAKE) clean -C base
+	@ $(MAKE) clean -C base_libft
 	@ $(MAKE) clean -C get_next_line
 	@ $(MAKE) clean -C printf
-	@ echo delete .o
 
 fclean: clean
 	@ rm -f $(NAME)
-	@ echo delete libft.a
+	@ $(MAKE) fclean -C base_libft
+	@ $(MAKE) fclean -C get_next_line
+	@ $(MAKE) fclean -C printf
 
-.PHONY: all re libft get_next_line printf clean fclean
+.PHONY: all re base_libft get_next_line printf clean fclean

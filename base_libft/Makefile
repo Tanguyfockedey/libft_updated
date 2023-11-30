@@ -6,11 +6,11 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 11:23:13 by tafocked          #+#    #+#              #
-#    Updated: 2023/11/16 20:47:26 by tafocked         ###   ########.fr        #
+#    Updated: 2023/11/30 17:02:49 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= libft.a
+NAME	= base_libft.a
 
 FILES	= ft_isalpha.c \
 			ft_isdigit.c \
@@ -48,8 +48,7 @@ FILES	= ft_isalpha.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
-
-B_FILES	= ft_lstnew.c \
+			ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
@@ -57,27 +56,23 @@ B_FILES	= ft_lstnew.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
-			ft_lstmap.c \
+			ft_lstmap.c
 
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 OBJ		= $(FILES:.c=.o)
-B_OBJ	= $(B_FILES:.c=.o)
 
-all: bonus
+all: $(NAME)
 
 re: fclean all
 
 $(NAME): $(OBJ)
 	ar -r $(NAME) $(OBJ)
 
-bonus: $(OBJ) $(B_OBJ)
-	ar -r $(NAME) $(OBJ) $(B_OBJ)
-
 clean: 
-	rm -f $(OBJ) $(B_OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
-.PHONY: all re bonus clean fclean
+.PHONY: all re clean fclean

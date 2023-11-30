@@ -6,11 +6,11 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 17:33:36 by tafocked          #+#    #+#              #
-#    Updated: 2023/11/08 18:05:57 by tafocked         ###   ########.fr        #
+#    Updated: 2023/11/30 17:42:24 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= libft.a
+NAME	= gnl.a
 
 FILES	=	get_next_line_bonus.c \
 			get_next_line_utils_bonus.c
@@ -30,4 +30,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-.PHONY: libft.a re clean fclean
+.PHONY: gnl.a re clean fclean

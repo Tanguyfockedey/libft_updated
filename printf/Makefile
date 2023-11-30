@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= libft.a
+NAME	= printf.a
 
 FILES	=	ft_printf.c \
 			ft_putunbr_base.c \
