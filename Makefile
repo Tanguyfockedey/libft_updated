@@ -6,14 +6,14 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 17:18:53 by tafocked          #+#    #+#              #
-#    Updated: 2023/11/30 17:41:39 by tafocked         ###   ########.fr        #
+#    Updated: 2023/11/30 18:17:04 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
 
 all: base_libft get_next_line printf
-	ar -ru $(NAME) base_libft/*.o get_next_line/*.o printf/*.o
+	@ ar rcs $(NAME) base_libft/*.o get_next_line/*.o printf/*.o
 
 re: clean all
 

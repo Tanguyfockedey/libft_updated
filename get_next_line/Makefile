@@ -6,7 +6,7 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 17:33:36 by tafocked          #+#    #+#              #
-#    Updated: 2023/11/30 17:42:24 by tafocked         ###   ########.fr        #
+#    Updated: 2023/11/30 17:49:48 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,4 +30,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-.PHONY: gnl.a re clean fclean
+.PHONY: re clean fclean

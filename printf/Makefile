@@ -37,4 +37,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-.PHONY: libft.a re clean fclean
+.PHONY: re clean fclean

@@ -6,7 +6,7 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 11:23:13 by tafocked          #+#    #+#              #
-#    Updated: 2023/11/30 17:02:49 by tafocked         ###   ########.fr        #
+#    Updated: 2023/11/30 18:08:43 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,12 +62,10 @@ CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 OBJ		= $(FILES:.c=.o)
 
-all: $(NAME)
-
-re: fclean all
-
 $(NAME): $(OBJ)
 	ar -r $(NAME) $(OBJ)
+
+re: fclean all
 
 clean: 
 	rm -f $(OBJ)
@@ -75,4 +73,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-.PHONY: all re clean fclean
+.PHONY: re clean fclean
