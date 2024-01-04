@@ -6,7 +6,7 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 17:18:53 by tafocked          #+#    #+#              #
-#    Updated: 2024/01/04 19:08:26 by tafocked         ###   ########.fr        #
+#    Updated: 2024/01/04 19:39:24 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,7 @@ PRINTF	=	printf/ft_printf.c \
 			printf/ft_spec_unsigned.c \
 
 STRING	=	string/ft_split.c \
+			string/ft_str_isint.c \
 			string/ft_strchr.c \
 			string/ft_strdup.c \
 			string/ft_striteri.c \
